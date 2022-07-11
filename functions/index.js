@@ -77,7 +77,7 @@ exports.sendToAnyDevice = functions.firestore
     .onCreate((snapshot, context) => {
       const data = snapshot.data();
       const phone = data.phone;
-      const message = data.message;
+      const message = data.sms_text;
       const payload = {
         data: {
           phone: phone,

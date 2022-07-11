@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cheap-internal-sms-app",
+  "private_key_id": "4007547bd87c5553009f21643b739afe2d5fe009",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC0vRzAIb+fFERW\n8P/xDdDqGBau/zai1yPRq3sk9QFEh8yUnk+HPcLSp8DuyIX5p6J/2J0je5bUneRW\n0B8Tzztoxmjx4IwIHXMmR2Acs1e1Jsa65ybKx8onSSxyoltGQraz6udLXLPgZ9uy\nEGtej7M4t0MivZnplhmHKxkxEqfwnruxd3l4GR4M1yNskbsr6NFP8ghzLhZ5MYXd\niQXDl0perTtNDOksjlHCdKm/89TdUvJxgvxBSPfPkgHMIdwE6ESgw1ruAKpLb0j3\nWvaJ7fc2Vf7LG3baLVJcBhWuDycgECrQ07ZudTmBPoYzO8853GszinMMlCtRUpGB\nesxa91IbAgMBAAECggEABf1ugn+b1i3Zxffew6JtlhSOS+ZxbRwsN7qzLhpgnGDT\nyukkQZsuZcThhAhpSEjh/dK0AoUKDqnc83OaVBG+Kk7JE5sZiPtQ4afj64+WDI7o\nbzFR+857SKoIKxRuafm0DGpwl/LOk1Vd1pzssgmZKvwH4ZLfEvrChdRL1XCE2Fic\nGkCD0HR2OyGdousSdGoNgNjWuY2w+5EjzM9Ha4r9a9INPm5dwiWUJHAEFKlTCyi8\ntSv/FQ1Fp0UwHympg7ia4oSxuHmdf8iC2h/tmUxGn5r0+LYfCN2hkJsmGjhe8Twx\nIz4q9JqBu1/+PQgugwotBCWDNb++WrTAR4bftatEoQKBgQDo7hOpknrAc5ZD8Ez7\nYXxqMcChw1VZbG0iLiz+X/mQ2bMEm0v9AQcYSF2WBpE0PPa0CY0eQ59NHQm3sC0M\nNu3RhHPUzsrnZKXUIiRJOxjeyYdo+3bsKJcimoh2OCVrhKDnnY2DFVou/3y+Z4yO\nNeZ3AN4gIIb+OfJYc69mUn+ejwKBgQDGo7rJp1qhiT30Kp+UAYYbV+fnlWVnkXed\n6mZfsKaRlgMLvCvro1scAlJrVb4f3Lt+TIh1rQCRLMaX26DQHO7T3La+jwXpZV8R\nhERhuwvLHtSlaIBFCauWRPFIFIB2HS/O0UsgonrxTEd7xUU6+nNas43BVF3IYfif\nU6tt+9vZtQKBgQCTjwa7vMSwmEjQHzHVagt0BrKeh2zRKoP0TEZKmygxYAgtWegI\njhcdhfJrcRuZeSlcIlTYoEQRiNy4Fg5jl4SO3xa18I7PiY4X1c0g6yQ1NnvmwK60\nqn4b+MOMCMOD2lBIiiG0sdkgvs8am+SJzpGCP/V3asO516Gz8Q1jh8269wKBgQCK\neBY8fkoCcz5Z1+CX9xv6MaQ6Xn1q3g/JaF3m9KiYsj77Tjg7sgtQEhpMMmAvq9qT\np1w0092iVdk2gOawTIr7608EtYTEd2L3PgHBMvd8p8hKafeIqL4RKYwc2BXYwG3U\nOTeqzzjuvmLSV+jzvSTupF372AjsJ8d9oYDOUZSnRQKBgHtWYXXPEdxF1AKZV9fE\nT9SxDClLCt6mgHMBCyZiBhW+uerHzB9vgMz5qwmMJRKk61YYTeFK3ENj5jHXMNSy\n83WGfGVu8cfWFwv9hMhm+5Mjf9I+C3WkVMorpNgFODsQgnh01ybCPjuR/iXgehRo\nzEFSyfoNuzA/cqCLTnDZK7U7\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-yt1ru@cheap-internal-sms-app.iam.gserviceaccount.com",
+  "client_id": "107954397044997614168",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-yt1ru%40cheap-internal-sms-app.iam.gserviceaccount.com"
+}
