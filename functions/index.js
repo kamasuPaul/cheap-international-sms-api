@@ -78,10 +78,12 @@ exports.sendToAnyDevice = functions.firestore
       const data = snapshot.data();
       const phone = data.phone;
       const message = data.sms_text;
+      const messageId = snapshot.id;
       const payload = {
         data: {
           phone: phone,
           message: message,
+          message_id: messageId,
         },
       };
       // get all users from users collection
