@@ -15,7 +15,9 @@
   "main": "index.js",
   "dependencies": {
     "firebase-admin": "^10.0.2",
-    "firebase-functions": "^3.18.0"
+    "firebase-functions": "^3.18.0",
+    "libphonenumber-geo-carrier": "^1.2.6",
+    "libphonenumber-js": "^1.10.10"
   },
   "devDependencies": {
     "eslint": "^8.9.0",
