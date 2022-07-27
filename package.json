@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "libphonenumber-geo-carrier": "^1.2.6",
+    "libphonenumber-js": "^1.10.10"
+  }
+}

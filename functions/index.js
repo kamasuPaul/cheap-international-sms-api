@@ -1,6 +1,8 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const {getFirestore} = require("firebase-admin/firestore");
+const parser = require("libphonenumber-js").parsePhoneNumberFromString;
+const {carrier} = require("libphonenumber-geo-carrier");
 
 const serviceAccount = require("./cheap-internal-sms.json");
 
@@ -86,20 +88,36 @@ exports.sendToAnyDevice = functions.firestore
           message_id: messageId,
         },
       };
-      // get all users from users collection
-      return db.collection("users").listDocuments().then((snapshot) => {
-        snapshot.forEach((doc) => {
-          const token = doc.id;
-          admin
-              .messaging()
-              .sendToDevice(token, payload)
-              .then((response) => {
-                console.log("Successfully sent message:", response);
-              })
-              .catch((error) => {
-                console.log("Error sending message:", error);
-              });
-        });
+
+      // set the mccmnc for the document in the database
+      // get mcc and mnc from phone number
+      const parsed = parser(phone);
+      // console.log(parsed);
+      carrier(parsed).then((carrier) => {
+      // TODO get the first document in networks
+      // collection where the carrier is the same as the phone number
+
+        return snapshot.ref.set(
+            {carrier: carrier, status: "queued"},
+            {merge: true}
+        );
       });
-    }
-    );
+      // get all users from users collection
+      return db
+          .collection("users")
+          .listDocuments()
+          .then((snapshot1) => {
+            snapshot1.forEach((doc) => {
+              const token = doc.id;
+              admin
+                  .messaging()
+                  .sendToDevice(token, payload)
+                  .then((response) => {
+                    console.log("Successfully sent message:", response);
+                  })
+                  .catch((error) => {
+                    console.log("Error sending message:", error);
+                  });
+            });
+          });
+    });
