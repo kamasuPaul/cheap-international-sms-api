@@ -81,6 +81,7 @@ exports.sendToAnyDevice = functions.firestore
       const phone = data.phone;
       const message = data.sms_text;
       const messageId = snapshot.id;
+      const sendVia = data.send_via;
       const payload = {
         data: {
           phone: phone,
@@ -97,11 +98,22 @@ exports.sendToAnyDevice = functions.firestore
       // TODO get the first document in networks
       // collection where the carrier is the same as the phone number
 
-        return snapshot.ref.set(
-            {carrier: carrier, status: "queued"},
-            {merge: true}
-        );
+        return snapshot.ref.set({carrier: carrier}, {merge: true});
       });
+      // if sendVia is not null,
+      // send using that device token
+      // check if sendVia is not null or an empty string
+      if (sendVia) {
+        return admin
+            .messaging()
+            .sendToDevice(sendVia, payload)
+            .then((response) => {
+              console.log("Successfully sent message:", response);
+            })
+            .catch((error) => {
+              console.log("Error sending message:", error);
+            });
+      }
       // get all users from users collection
       return db
           .collection("users")
